@@ -1,54 +1,53 @@
 <html lang="ru">
 <head>
-    <title>Проигрыватель</title>
-    <link rel="stylesheet" href="static/css/font-awesome.min.css">
-    <style>
-        .player_button {
-            border-style: hidden;
-            cursor: pointer;
-            color: white;
-            background-color: transparent;
-            font-size: large;
-            margin: 10px
-        }
+  <title>Проигрыватель</title>
+  <link rel="stylesheet" href="static/css/font-awesome.min.css">
+  <style>
+    .player_button {
+      border-style: hidden;
+      cursor: pointer;
+      color: white;
+      background-color: transparent;
+      font-size: large;
+      margin: 10px
+    }
+    .player_buttons {
+      display: flex;
+      flex-grow: 0;
+      background: black
+    }
 
-        .player {
-            box-shadow: 0 0 15px rgba(0, 0, 0, 1.5);
-            width: 800px;
-            height: 600px;
-            display: flex;
-            flex-direction: column;
-        }
+    .video_player {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 1.5);
+      width: 800px;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .player_window {
-            display: flex;
-            flex-grow: 1;
-            flex-direction: row
-        }
+    .player_window {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: row
+    }
 
-        .player_buttons {
-            display: flex;
-            flex-grow: 0;
-            background: black
-        }
-
-        .stub {
-            display: flex;
-            flex-grow: 3;
-        }
-    </style>
+    .plug_block {
+      display: flex;
+      flex-grow: 3;
+    }
+  </style>
 </head>
 <body>
-<div id="player" class="player">
-    <div class="js-video-container player_window"></div>
-    <div class="player_buttons">
-        <button class="js-play-button player_button"><i class=" fa fa-play"></i></button>
-        <button class="js-pause-button player_button" hidden><i class=" fa fa-pause"></i></button>
-        <button class="js-volume-button player_button"><i class="fa fa-volume-off"></i></button>
-        <button class="js-mute-button player_button" hidden><i class="fa fa-volume-up"></i></button>
-        <div class="stub"></div>
-        <button class="js-fullscreen-button player_button"><i class="fa fa-arrows-alt"></i></button>
-    </div>
+<div id="player" class="video_player">
+  <div class="js-video-container player_window"></div>
+  <div class="player_buttons">
+    <button class="js-play-button player_button"><i class=" fa fa-play"></i></button>
+    <button class="js-pause-button player_button" hidden><i class=" fa fa-pause"></i></button>
+    <button class="js-volume-button player_button"><i class="fa fa-volume-off"></i></button>
+    <button class="js-mute-button player_button" hidden><i class="fa fa-volume-up"></i></button>
+    <div class="plug_block"></div>
+    <button class="js-fullscreen-button player_button"><i class="fa fa-arrows-alt"></i></button>
+  </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
