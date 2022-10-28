@@ -7,5 +7,5 @@ def rebuild():
 
 rebuild()
 server = Server()
-server.watch('template.html', rebuild)
-server.serve(root='template.html')
+server.watch('index.html', rebuild)
+server.serve(root='')
