@@ -20,16 +20,14 @@
       background: black
       }
 
-      .play-button, .pause-button, .volume-button, .mute-button, .fullscreen-button {
+      .play-button{
         border-style: hidden;
         background-color: transparent;
         color: white;
         cursor: pointer;
         font-size: large;
-        margin-bottom: 15px;
-        margin-left: 10px;
-        width: 20px;
-        height: 15px;
+        width: 40px;
+        height: 40px;
       }
       .fullscreen-button{
         margin-left: 88%;
@@ -44,10 +42,10 @@
     <div class="js-video-container video-container"></div>
     <div class="button-containers">
       <button class="js-play-button play-button"><i class=" fa fa-play"></i></button>
-      <button class="js-pause-button pause-button" hidden><i class=" fa fa-pause"></i></button>
-      <button class="js-volume-button volume-button"><i class="fa fa-volume-off"></i></button>
-      <button class="js-mute-button mute-button" hidden><i class="fa fa-volume-up"></i></button>
-      <button class="js-fullscreen-button fullscreen-button"><i class="fa fa-arrows-alt"></i></button>
+      <button class="js-pause-button play-button" hidden><i class=" fa fa-pause"></i></button>
+      <button class="js-volume-button play-button"><i class="fa fa-volume-off"></i></button>
+      <button class="js-mute-button play-button" hidden><i class="fa fa-volume-up"></i></button>
+      <button class="js-fullscreen-button fullscreen-button play-button"><i class="fa fa-arrows-alt"></i></button>
     </div>
   </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
