@@ -1,70 +1,58 @@
-<!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <title>Подключение плеера</title>
-  <meta charset="utf-8">
+  <title>Проигрыватель</title>
   <link rel="stylesheet" href="static/css/font-awesome.min.css">
-  <style type="text/css">
-    .button{
-      border-style: none;
-      cursor: pointer;
-      color:white;
-      background-color:transparent ;
-      width:50px;
-      float:left
-    }
-    .button#expand{
-      float: right;
-    }
-    .player-container{
-      box-shadow: 0 0 20px rgba(0,0,0,2);
+  <link type="Image/x-icon" href="static/favicon.png" rel="icon">
+  <style>
+    .player-container {
       width: 800px;
       height: 600px;
       display: flex;
       flex-direction: column;
     }
-    .video-container{
-      flex-grow: 1
-    }
-    .button_container{
-      background-color:black;
-    }
 
+      .video-container {
+        flex-grow: 1;
+      }
 
+      .button-containers {
+      display: flex;
+      background: black
+      }
+
+      .play-button{
+        border-style: hidden;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        font-size: large;
+        width: 40px;
+        height: 40px;
+      }
+      .fullscreen-button{
+        margin-left: 88%;
+      }
+      .shadow{
+        box-shadow: 0 0 25px rgba(0, 0, 0, 1.5)
+      }
   </style>
-
 </head>
 <body>
-<div id="player" class="player-container">
-  <div class="js-video-container video-container" ></div>
-  <div class="button_container">
-    <button class="js-play-button button">
-      <i class="fa fa-play fa-2x" aria-hidden="true"></i>
-    </button>
-    <button class="js-pause-button button" hidden>
-      <i class="fa fa-pause fa-2x" aria-hidden="true"></i>
-    </button>
-    <button class="js-volume-button button" >
-      <i class="fa fa-volume-off fa-2x" aria-hidden="true"></i>
-    </button>
-    <button class=" js-mute-button button" >
-      <i class="fa fa-volume-up fa-2x" aria-hidden="true" hidden></i>
-    </button>
-
-    <button id = 'expand' class="js-fullscreen-button button" >
-      <i class="fa fa-expand fa-2x" aria-hidden="true"></i>
-    </button>
+  <div id="player" class="player-container shadow">
+    <div class="js-video-container video-container"></div>
+    <div class="button-containers">
+      <button class="js-play-button play-button"><i class=" fa fa-play"></i></button>
+      <button class="js-pause-button play-button" hidden><i class=" fa fa-pause"></i></button>
+      <button class="js-volume-button play-button"><i class="fa fa-volume-off"></i></button>
+      <button class="js-mute-button play-button" hidden><i class="fa fa-volume-up"></i></button>
+      <button class="js-fullscreen-button fullscreen-button play-button"><i class="fa fa-arrows-alt"></i></button>
+    </div>
   </div>
-
-</div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
 <script src="static/player.js"></script>
-
-
 <script type="text/javascript">
-  createPlayer({elementId: 'player'});
+    createPlayer({elementId: 'player'});
 </script>
-
 </body>
 </html>
