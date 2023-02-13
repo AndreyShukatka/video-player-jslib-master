@@ -1,6 +1,9 @@
 <html lang="ru">
 <head>
   <title>Проигрыватель</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/font-awesome.min.css">
   <link type="Image/x-icon" href="static/favicon.png" rel="icon">
   <style>
@@ -35,6 +38,17 @@
       .shadow{
         box-shadow: 0 0 25px rgba(0, 0, 0, 1.5)
       }
+      .timer{
+        color: white;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+      }
+      .progres-bar{
+        width: 773px;
+        height: 55px;
+      }
   </style>
 </head>
 <body>
@@ -45,6 +59,11 @@
       <button class="js-pause-button play-button" hidden><i class=" fa fa-pause"></i></button>
       <button class="js-volume-button play-button"><i class="fa fa-volume-off"></i></button>
       <button class="js-mute-button play-button" hidden><i class="fa fa-volume-up"></i></button>
+      <div class="js-current-time timer"></div>
+      <div class="js-progress progres-bar">
+        <div class="js-progress-slider progres-bar" style="background-color: red;"></div>
+      </div>
+      <div class="js-duration timer"></div>
       <button class="js-fullscreen-button fullscreen-button play-button"><i class="fa fa-expand"></i></button>
     </div>
   </div>
