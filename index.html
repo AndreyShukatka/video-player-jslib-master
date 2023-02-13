@@ -49,6 +49,35 @@
         width: 773px;
         height: 55px;
       }
+      .progress-slider{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: red;
+      }
+      .player-time-progress{
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        align-items: center;
+      }
+    .video_progress {
+      display: flex;
+      flex-direction: row;
+      background-color: grey;
+      height: 5px;
+      border-radius: 20px;
+      margin-left: 10px;
+      flex-grow: 1;
+      margin-right: 10px;
+      align-items: center;
+    }
+    .video_progress_bar {
+      background-color: red;
+      width: 120px;
+      height: 5px;
+      border-radius: 30px;
+    }
   </style>
 </head>
 <body>
@@ -59,11 +88,13 @@
       <button class="js-pause-button play-button" hidden><i class=" fa fa-pause"></i></button>
       <button class="js-volume-button play-button"><i class="fa fa-volume-off"></i></button>
       <button class="js-mute-button play-button" hidden><i class="fa fa-volume-up"></i></button>
-      <div class="js-current-time timer"></div>
-      <div class="js-progress progres-bar">
-        <div class="js-progress-slider progres-bar" style="background-color: red;"></div>
+      <div class="player-time-progress">
+        <div class="js-current-time timer"></div>
+        <div class="js-progress video_progress"">
+          <div class="js-progress-slider video_progress_bar"></div>
+        </div>
+        <div class="js-duration timer"></div>
       </div>
-      <div class="js-duration timer"></div>
       <button class="js-fullscreen-button fullscreen-button play-button"><i class="fa fa-expand"></i></button>
     </div>
   </div>
