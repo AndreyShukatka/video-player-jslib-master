@@ -44,6 +44,7 @@
 }
 .video_progress {
   display: flex;
+  cursor: pointer;
   flex-direction: row;
   background-color: grey;
   height: 5px;
