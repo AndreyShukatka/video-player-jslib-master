@@ -67,10 +67,10 @@
   transition-duration: 300ms;
   border-style: solid;
   opacity: 0;
-  border-width: 5px;
+  border-width: 3px;
   border-color: white;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   background-color: red;
   border-radius: 50%;
   display: inline-block;
