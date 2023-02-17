@@ -1,0 +1,76 @@
+.player-container {
+  width: 798px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-container {
+  flex-grow: 1;
+}
+
+.button-containers {
+  display: flex;
+  background: black
+}
+
+.play-button {
+  border-style: hidden;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 21px;
+  width: 35px;
+  height: 48px;
+}
+.fullscreen-button{
+  margin-left: auto;
+}
+.shadow{
+  box-shadow: 0 0 25px rgba(0, 0, 0, 1.5)
+}
+.timer {
+  color: white;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+.player-time-progress{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+}
+.video_progress {
+  display: flex;
+  flex-direction: row;
+  background-color: grey;
+  height: 5px;
+  border-radius: 20px;
+  margin-left: 10px;
+  flex-grow: 1;
+  margin-right: 10px;
+  align-items: center;
+}
+.video_progress:hover .dot{
+  opacity: 1
+}
+.video_progress_bar {
+  background-color: red;
+  width: 120px;
+  height: 5px;
+  border-radius: 30px;
+}
+.dot {
+  transition-duration: 300ms;
+  border-style: solid;
+  opacity: 0;
+  border-width: 5px;
+  border-color: white;
+  height: 12px;
+  width: 12px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}

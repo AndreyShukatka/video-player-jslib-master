@@ -6,84 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/font-awesome.min.css">
   <link type="Image/x-icon" href="static/favicon.png" rel="icon">
-  <style>
-    .player-container {
-      width: 1200px;
-      height: 900px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .video-container {
-      flex-grow: 1;
-    }
-
-    .button-containers {
-    display: flex;
-    background: black
-    }
-
-    .play-button {
-      border-style: hidden;
-      background-color: transparent;
-      color: white;
-      cursor: pointer;
-      font-size: 26px;
-      width: 56px;
-      height: 63px;
-    }
-    .fullscreen-button{
-      margin-left: auto;
-    }
-    .shadow{
-      box-shadow: 0 0 25px rgba(0, 0, 0, 1.5)
-    }
-    .timer {
-      color: white;
-      font-size: 24px;
-      display: flex;
-      align-items: center;
-      font-family: 'Roboto', sans-serif;
-    }
-    .player-time-progress{
-      display: flex;
-      flex-direction: row;
-      flex-grow: 1;
-      align-items: center;
-    }
-    .video_progress {
-      display: flex;
-      flex-direction: row;
-      background-color: grey;
-      height: 5px;
-      border-radius: 20px;
-      margin-left: 10px;
-      flex-grow: 1;
-      margin-right: 10px;
-      align-items: center;
-    }
-    .video_progress:hover .dot{
-      opacity: 1
-    }
-    .video_progress_bar {
-      background-color: red;
-      width: 120px;
-      height: 5px;
-      border-radius: 30px;
-    }
-    .dot {
-      transition-duration: 300ms;
-      border-style: solid;
-      opacity: 0;
-      border-width: 5px;
-      border-color: white;
-      height: 12px;
-      width: 12px;
-      background-color: red;
-      border-radius: 50%;
-      display: inline-block;
-    }
-  </style>
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
   <div id="player" class="player-container shadow">
@@ -101,7 +24,7 @@
         </div>
         <div class="js-duration timer"></div>
       </div>
-      <button class="js-fullscreen-button fullscreen-button play-button"><i class="fa fa-expand"></i></button>
+      <button class="js-fullscreen-button play-button"><i class="fa fa-expand"></i></button>
     </div>
   </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
